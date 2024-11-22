@@ -1,0 +1,17 @@
+<h2>Lista de Reportes</h2>
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Fecha de Carga</th>
+    <th>Acciones</th>
+  </tr>
+  <% reports.forEach(report => { %>
+  <tr>
+    <td><%= report.filename %></td>
+    <td><%= report.uploadedAt %></td>
+    <td>
+      <a href="/reports/delete/<%= report.id %>">Eliminar</a>
+    </td>
+  </tr>
+  <% }) %>
+</table>
